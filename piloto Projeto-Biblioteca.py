@@ -90,4 +90,39 @@ def remover():
 
     except ValueError:
         print("\n🛑 Digite apenas números!")
-    
+
+
+def menu():
+    while True:
+        print("=" * 70)
+        print("📚         BIBLIOTECA - MENU PRINCIPAL         📚")
+        print("=" * 70)
+        print("1 - Cadastrar livro")
+        print("2 - Listar livros")
+        print("3 - Emprestar livro")
+        print("4 - Devolver livro")
+        print("5 - Remover livro")
+        print("0 - Sair")
+        print("=" * 70)
+
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            cadastrar()
+        elif opcao == "2":
+            listar()
+        elif opcao == "3":
+            emprestar()
+        elif opcao == "4":
+            devolver()
+        elif opcao == "5":
+            remover()
+        elif opcao == "0":
+            print("Saindo... Até logo!")
+            break
+        else:
+            print("❌ Opção inválida!\n")
+
+
+if __name__ == "__main__":
+    menu()
